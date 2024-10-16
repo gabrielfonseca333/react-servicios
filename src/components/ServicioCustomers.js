@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 //1. importamos la librería de axios
 import axios from 'axios'
+import Global from '../Global';
 
 export default class ServicioCustomers extends Component {
 
     //2. necesitamos URL y REQUEST de acceso al servicio
-    urlCustomers = "https://northwind.netcore.io/customers.json";
+    urlCustomers = Global.urlApiCustomers;
 
 
     //3.2. variable para almacenar los clientes
@@ -21,8 +22,9 @@ export default class ServicioCustomers extends Component {
     //3.1. creamos el método
     loadCustomers =()=>{
         console.log("Antes del servicio");
+        let request = "customers.json";
 
-        axios.get(this.urlCustomers).then((response)=>{
+        axios.get(this.urlCustomers + request).then((response)=>{
             console.log("Leyendo...");
 
             //4. devuelve un array, así que lo almacenamos
