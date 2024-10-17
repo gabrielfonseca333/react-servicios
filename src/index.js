@@ -9,11 +9,12 @@ import BuscadorCoches from './components/BuscadorCoches';
 import BuscadorCochesProfe from './components/BuscadorCochesProfe';
 import DepartamentosEmpleados from './components/DepartamentosEmpleados';
 import EmpleadosOficios from './components/EmpleadosOficios';
+import Departamentos from './components/MaestroDetalle/Departamentos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <EmpleadosOficios />
+    <Departamentos />
 
 );
 
