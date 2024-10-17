@@ -1,6 +1,7 @@
 var Global = {
 
-    urlApiCustomers: "https://northwind.netcore.io/"
+    urlApiCustomers: "https://northwind.netcore.io/",
+    urlApiCoches: "https://apicochespaco.azurewebsites.net/"
 
 }
 
