@@ -11,6 +11,7 @@ export default class Empleados extends Component {
     }
 
     loadEmpleados=()=>{
+      console.log("aqui")
        let idDepartamento = this.props.iddepartamento;
        let request = "api/Empleados/EmpleadosDepartamento/" + idDepartamento;
        let url = Global.urlApiEmpleados + request
@@ -27,8 +28,11 @@ export default class Empleados extends Component {
         this.loadEmpleados();
     }
 
-    componentDidUpdate=()=>{
-        this.loadEmpleados();
+    componentDidUpdate=(prevProps) => {
+    
+        if(this.props.iddepartamento != prevProps.iddepartamento){
+          this.loadEmpleados();
+        }
     }
 
 

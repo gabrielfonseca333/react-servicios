@@ -10,11 +10,18 @@ import BuscadorCochesProfe from './components/BuscadorCochesProfe';
 import DepartamentosEmpleados from './components/DepartamentosEmpleados';
 import EmpleadosOficios from './components/EmpleadosOficios';
 import Departamentos from './components/MaestroDetalle/Departamentos';
+import TablaMultiplicar from './components/TablaMultiplicar';
+import MenuRutas from './components/MenuRutas';
+import Router from './components/Router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <Departamentos />
+    <div>
+        <MenuRutas/>
+        <Router/>
+    </div>
+    
 
 );
 
