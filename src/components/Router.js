@@ -4,6 +4,7 @@ import Home from './Home'
 import TablaMultiplicar from './TablaMultiplicar'
 import NotFound from './NotFound'
 import { useParams } from 'react-router-dom'
+import MenuRutas from './MenuRutas'
 
 
 export default class Router extends Component {
@@ -19,6 +20,8 @@ export default class Router extends Component {
     return (
       <div>
         <BrowserRouter>
+          <MenuRutas/>       
+
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/tablamultiplicar/:minumero" 

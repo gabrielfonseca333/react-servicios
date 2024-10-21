@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
+//imports de bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+import $ from 'jquery';
+import Popper from 'popper.js'
+import "bootstrap/dist/js/bootstrap.bundle";
+
+
+
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import ServicioCustomers from './components/ServicioCustomers';
@@ -14,11 +23,12 @@ import TablaMultiplicar from './components/TablaMultiplicar';
 import MenuRutas from './components/MenuRutas';
 import Router from './components/Router';
 
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
     <div>
-        <MenuRutas/>
         <Router/>
     </div>
     

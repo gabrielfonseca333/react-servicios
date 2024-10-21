@@ -59,13 +59,13 @@ export default class BuscadorCochesProfe extends Component {
       <div>
         <h1>Coches seleccionado Profe</h1>
         <form>
-          <label>Introduzca marca: </label>
-          <input type="text" ref={this.cajaMarca}></input>
+          <label >Introduzca marca: </label>
+          <input className="form-control" type="text" ref={this.cajaMarca}></input>
           <button onClick={this.buscarCoches}>Buscar coche</button>
           <button onClick={this.reloadDibujo}>Recargar coches</button>
         </form>
         <br></br>
-        <table border={1}>
+        <table className="table table-dark" border={1}>
           <thead>
             <tr>
               <th>Coche</th>
