@@ -22,6 +22,7 @@ import Departamentos from './components/MaestroDetalle/Departamentos';
 import TablaMultiplicar from './components/TablaMultiplicar';
 import MenuRutas from './components/MenuRutas';
 import Router from './components/Router';
+import HospitalesMultiples from './components/HospitalesMultiples';
 
 
 
@@ -29,7 +30,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
     <div>
-        <Router/>
+        <HospitalesMultiples/>
     </div>
     
 
