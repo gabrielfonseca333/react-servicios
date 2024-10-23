@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import Trabajadores from "./Trabajadores";
 import axios from "axios";
 import Global from "../Global";
+import { Button } from "bootstrap/dist/js/bootstrap.bundle";
 
 export default class HospitalesMultiples extends Component {
   selectHospital = React.createRef();
+ 
 
   state = {
     hospitales: [],
-    hospitalesSeleccionados: []
+    hospitalesSeleccionados: [],
   };
 
   loadHospitales = () => {
@@ -22,19 +24,21 @@ export default class HospitalesMultiples extends Component {
     });
   };
 
-  getHospitalesSeleccionados = (e)=>{
-    e.preventDefault()
-    let aux = []
-    let options = this.selectHospital.current.options
-    for(var option of options){
-        if(option.selected==true){
-            aux.push(option.value)
-        }
+  
+
+  getHospitalesSeleccionados = (e) => {
+    e.preventDefault();
+    let aux = [];
+    let options = this.selectHospital.current.options;
+    for (var option of options) {
+      if (option.selected == true) {
+        aux.push(option.value);
+      }
     }
     this.setState({
-        hospitalesSeleccionados: aux
-    })
-  }
+      hospitalesSeleccionados: aux,
+    });
+  };
 
   componentDidMount = () => {
     this.loadHospitales();
@@ -73,15 +77,19 @@ export default class HospitalesMultiples extends Component {
             })}
           </select>
           <br />
-          <button  onClick={this.getHospitalesSeleccionados} className="btn btn-primary">Mostrar Datos</button>
+          <button
+            onClick={this.getHospitalesSeleccionados}
+            className="btn btn-primary"
+          >
+            Mostrar Datos
+          </button>
+          <br />
+          
         </form>
         <br />
-        {
-            this.state.hospitalesSeleccionados.length != 0 &&
-            <Trabajadores idhospitales={this.state.hospitalesSeleccionados}/>
-        }
-    
-        
+        {this.state.hospitalesSeleccionados.length != 0 && (
+          <Trabajadores idhospitales={this.state.hospitalesSeleccionados} />
+        )}
       </div>
     );
   }
