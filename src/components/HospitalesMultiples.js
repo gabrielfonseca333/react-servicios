@@ -6,7 +6,7 @@ import { Button } from "bootstrap/dist/js/bootstrap.bundle";
 
 export default class HospitalesMultiples extends Component {
   selectHospital = React.createRef();
- 
+  cajaSalario = React.createRef();
 
   state = {
     hospitales: [],
@@ -24,7 +24,25 @@ export default class HospitalesMultiples extends Component {
     });
   };
 
-  
+  //incremento=1&idhospital=19
+//   incrementarSalario = () => {
+   
+//     let salario = parseInt(this.cajaSalario.current.value);
+//     let hospis = this.state.hospitalesSeleccionados;
+//     let data = "";
+//     for (var id of hospis) {
+//       data += "&idhospital=" + id;
+//       console.log("🚀 ~ HospitalesMultiples ~ data:", data);
+//     }
+//     let request =
+//       "api/Trabajadores/UpdateSalarioTrabajadoresHospitales?incremento=" +
+//       salario +
+//       data;
+//     let url = Global.urlApiEjemplos + request;
+//     axios.put(url).then(response=>{
+//         console.log("Actualizado el sueldo")
+//     })
+//   };
 
   getHospitalesSeleccionados = (e) => {
     e.preventDefault();
@@ -84,7 +102,15 @@ export default class HospitalesMultiples extends Component {
             Mostrar Datos
           </button>
           <br />
-          
+          {/* <input
+            type="text"
+            ref={this.cajaSalario}
+            placeholder="Salario a incrementar"
+            className="form-control"
+          ></input>
+          {/* <button onClick={this.incrementarSalario} className="btn btn-warning">
+            Incrementar Salario
+          </button> */}
         </form>
         <br />
         {this.state.hospitalesSeleccionados.length != 0 && (

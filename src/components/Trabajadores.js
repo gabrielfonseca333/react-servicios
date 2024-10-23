@@ -94,7 +94,7 @@ export default class Trabajadores extends Component {
           );
         })}
 
-        <table className="table table-hover">
+        <table className="table">
           <thead>
             <tr>
               <th>Id Trabajador</th>
